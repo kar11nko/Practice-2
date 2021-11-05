@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    list-style: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: url(images/bg-top.svg)
+                no-repeat right top,
+                url(images/bg-bottom.svg)
+                no-repeat left bottom;
+    background-color: hsl(240, 70%, 95%);
+    height: 100vh;
+    padding: 12em 0;
+}
+
+/* __________main__________ */
+main{
+    display: flex;
+    width: 66em;
+    margin: 0 auto;
+    position: relative;
+}
+/* ______header______ */
+.title-container{
+    position: absolute;
+    top: -8em;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.title-container > h1{
+    text-align: center;
+    color: hsl(240, 30%, 55%);
+    margin-bottom: 0.5em;
+    font-size: 40px;
+}
+
+.title-container > div{
+    display: flex;
+    gap: 0.8em;
+}
+
+.title-container p {
+    color: hsl(240, 23%, 55%);  
+    margin: auto 0;
+}
+
+.timeframe-toggle {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 3.5em;
+    height: 1.8em;
+}
+
+#timeframe-toggle{
+    display: none;
+}
+
+#timeframe-toggle:checked + .slider {
+    background-color: Linear-Gradient(90deg, hsl(240, 75%, 85%), hsl(240, 65%, 65%));
+}
+
+#timeframe-toggle:checked + .slider:before {
+    transform: translateX(1.5em);
+}
+
+.slider {
+    background: Linear-Gradient(90deg, hsl(240, 75%, 85%), hsl(240, 65%, 65%));
+    cursor: pointer;
+    border-radius: 1.4em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    content: "";
+    background: hsl(0, 0%, 100%);
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    position: absolute;
+    left: 0.3em;
+    bottom: 0.2em;
+    transition: .4s;
+}
+
+/* ______options______ */
+.option{
+    background: hsl(0, 0%, 100%);
+    color: hsl(233, 13%, 49%);
+    text-align: center;
+    height: 26em;
+    width: 22em;
+    padding: 2em 1em;
+    margin: auto 0;
+    border-radius: 0.5em;
+}
+
+.pro{
+    background: Linear-Gradient(90deg, hsl(240, 75%, 85%), hsl(240, 65%, 65%));
+    color: hsl(0, 0%, 100%);
+    height: 30em;
+    padding: 4em 2em;
+    z-index: 1;
+}
+
+.option > h2{
+    font-size: 25px;
+}
+
+.option > p {
+    font-size: 40px;
+    color: hsl(232, 13%, 33%);
+    padding: 0.3em 0 0.4em;
+    border-bottom:  1px solid;
+}
+
+.pro > p{
+    border-bottom:  1px solid;
+    color: hsl(0, 0%, 100%);
+}
+
+.option li {
+    padding: 1em 0;
+    border-bottom:  1px solid;
+}
+
+.pro li{
+    border-bottom:  1px solid;
+}
+
+.option button{
+    background: Linear-Gradient(90deg, hsl(240, 75%, 85%), hsl(240, 65%, 65%));
+    color: hsl(0, 0%, 100%);
+    width: 100%;
+    height: 3em;
+    cursor: pointer;
+
+    padding: 1em;
+    border: none;
+    border-radius: 0.5em;
+    margin-top: 3em;
+}
+
+.option button:hover, .option button:focus-visible{
+    background: hsl(0, 0%, 100%);
+    color: hsl(240, 75%, 85%);
+    border: hsl(237, 63%, 64%) 2px solid;
+}
+
+.pro button{
+    background: hsl(0, 0%, 100%);
+    color: hsl(237, 63%, 64%);
+}
+
+.pro button:hover, .pro button:focus-visible{
+    background: Linear-Gradient(90deg, hsl(240, 75%, 85%), hsl(240, 65%, 65%));
+    color: hsl(0, 0%, 100%);
+    border: hsl(0, 0%, 100%) 2px solid;
+}
+
+
+@media(max-width: 1180px){
+    /* __________main__________ */
+    main{
+        width: 90%;
+        margin: 0 5%;
+    }
+    /* ______options______ */
+    .option{
+        width: calc(100%/3);
+    }
+}
+
+@media(max-width:980px){
+    body{
+        height: 220vh;
+    }
+
+    /* __________main__________ */
+    main{
+        flex-direction: column;
+        gap: 1em;
+    }
+    /* ______options______ */
+    .option{
+        width: 100%;
+    }
+    .pro{
+        height: 26em;
+    }
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 3%;
+    color: hsl(240, 23%, 55%);  
+  }
+  
+  .attribution a {
+    font-family: "Times New Roman";
+    color: hsl(240, 23%, 55%);  
+  }
