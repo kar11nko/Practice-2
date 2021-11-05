@@ -67,14 +67,6 @@ Snippets:
 }
 
 ```
-```js
-//email format validation pattern//
-function validate() {
-  let value = input.value;
-  const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-  if (value.match(pattern)) return true;
-  else return false;
-}
 ```
 ## Author
 Karina Kaukenova
